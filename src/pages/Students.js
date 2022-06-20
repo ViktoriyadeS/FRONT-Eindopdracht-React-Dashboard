@@ -10,11 +10,12 @@ function Students() {
   const [studentChartData, setStudentChartData] = useState([]);
 
   const handleClick = (el) => {
-    //  console.log(el + " clicked");
+    console.log(el + " clicked");
+
     const results = studentData.filter((item) => item.name === el);
     setStudentChartData(results);
   };
-  console.log(studentChartData);
+  console.log(studentChartData.map((item) => item.difficulty));
   const studentsList = uniqueStudentNames.map((student) => {
     return (
       <div className="card" key={Math.random(100) + 100 * Math.random(100)}>
