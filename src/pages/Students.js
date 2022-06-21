@@ -15,7 +15,7 @@ function Students() {
     const results = studentData.filter((item) => item.name === el);
     setStudentChartData(results);
   };
-
+  const chartTitle = ""
   const studentsList = uniqueStudentNames.map((student) => {
     return (
       <div className="card" key={Math.random(100) + 100 * Math.random(100)}>
@@ -36,7 +36,7 @@ function Students() {
         <div className="list">{studentsList}</div>
         <h1>Student Votes</h1>
         <div>
-          <Chart data={studentChartData} labels={studentChartLabels} />;
+          <Chart data={studentChartData} labels={studentChartLabels} chartTitleText = {chartTitle}/>;
         </div>
       </div>
     </div>
