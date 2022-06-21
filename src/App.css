@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap");
+
+body {
+    background-color: #545a6b;
+    color: #232323;
+}
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Montserrat", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-top {
+    width: 100%;
+    background-color: #222233;
+    color: #dbdbdb;
+    font-size: 30px;
+    height: 50px;
+    font-family: "Montserrat", sans-serif;
+    padding: 15px 15px 0px;
+}
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+
+    height: 10%;
+    width: fit-content;
+    font-family: "Montserrat", sans-serif;
+    color: #dbdbdb;
+    z-index: 9;
+}
+nav .link {
+    text-decoration: none;
+    justify-content: end;
+    font-size: 20px;
+    color: inherit;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+}
+.icon {
+    margin-right: 4px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.page {
+    padding-bottom: 125px;
+    overflow: hidden;
+}
+.page .chartBox {
+    margin: auto 10px;
+}
+.page .chartBox h2 {
+    /* border: 2px solid #232323; */
+    margin-bottom: 0;
+    width: fit-content;
+    padding: 2px 15px;
+    /* border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: none; */
+}
+canvas {
+    max-height: 420px;
+    width: 100%;
+    padding: 40px;
+    background-color: #222233;
+    border-radius: 30px;
+    /* border-top-left-radius: 0; */
+}
+.page .infoBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    /* height: 150px; */
+}
+.page .infoBox .widget {
+    margin: 10px;
+    padding: 10px;
+    /* border-bottom: 2px solid #232323;
+    border-radius: 50%; */
+    text-align: center;
+    background-color: #222233;
+    color: #dbdbdb;
+    width: 100%;
+    height: 120px;
+    border-radius: 20px;
+}
+.page .widget p {
+    font-size: 35px;
+    color: #e3170a;
+    font-weight: 900;
+    margin-top: 2px;
+}
+.list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card {
+    border-radius: 20px;
+    background-color: #929291a5;
+    margin: 10px;
+    padding: 10px;
+    color: #232323;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.button{
+    border: none;
+    background-color: transparent;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (max-width: 400px) {
+    .icon {
+        display: block;
+    }
+    nav .link p {
+        display: none;
+    }
 }
