@@ -51,7 +51,7 @@ const Chart = (props) => {
 
     setChartOptions({
       responsive: true,
-      maintainAspectRatio: false,
+      maintainAspectRatio: true,
       maxBarThickness: 20,
       plugins: {
         legend: {

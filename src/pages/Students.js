@@ -1,21 +1,21 @@
 import { uniqueStudentNames, overviewAssignments } from "../data/functions";
 import studentData from "../data/studentData";
 import Chart from "../components/Chart";
+
 import Checkbox from "../components/Checkbox";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import React from "react";
 import StudentBtn from "../components/StudetBtn";
 
 function Students() {
   const [studentChartData, setStudentChartData] = useState([]);
-
+  const studentChartLabels = overviewAssignments.map((item) => item.assignment);
   const handleClick = (el) => {
     console.log(el + " clicked");
-
     const results = studentData.filter((item) => item.name === el);
     setStudentChartData(results);
   };
-  console.log(studentChartData.map((item) => item.difficulty));
+
   const studentsList = uniqueStudentNames.map((student) => {
     return (
       <div className="card" key={Math.random(100) + 100 * Math.random(100)}>
@@ -28,8 +28,7 @@ function Students() {
     );
   });
 
-  const studentChartLabels = overviewAssignments.map((item) => item.assignment);
-
+  console.log(studentChartData);
   return (
     <div className="page">
       <div>
