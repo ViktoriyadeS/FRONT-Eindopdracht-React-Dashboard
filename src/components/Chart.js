@@ -91,6 +91,7 @@ const Chart = (props) => {
         },
       },
     });
+    console.log('change')
   }, []);
 
   return <Bar options={chartOptions} data={chartData} />;
