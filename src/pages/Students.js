@@ -9,13 +9,15 @@ import StudentBtn from "../components/StudetBtn";
 
 function Students() {
   const [studentChartData, setStudentChartData] = useState([]);
+  const [isShown, setIsShown] = useState(false);
   const studentChartLabels = overviewAssignments.map((item) => item.assignment);
   const handleClick = (el) => {
     console.log(el + " clicked");
     const results = studentData.filter((item) => item.name === el);
     setStudentChartData(results);
+    setIsShown(current => !current);
   };
-  const chartTitle = ""
+  const chartTitle = "";
   const studentsList = uniqueStudentNames.map((student) => {
     return (
       <div className="card" key={Math.random(100) + 100 * Math.random(100)}>
@@ -34,10 +36,17 @@ function Students() {
       <div>
         <h1>List</h1>
         <div className="list">{studentsList}</div>
-        <h1>Student Votes</h1>
-        <div>
-          <Chart data={studentChartData} labels={studentChartLabels} chartTitleText = {chartTitle}/>;
-        </div>
+        {isShown && <h1>Student Votes</h1>}
+        {isShown && (
+          <div>
+            <Chart
+              data={studentChartData}
+              labels={studentChartLabels}
+              chartTitleText={chartTitle}
+            />
+            ;
+          </div>
+        )}
       </div>
     </div>
   );
