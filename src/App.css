@@ -108,11 +108,18 @@ canvas {
     color: #232323;
 }
 
-.button{
+.button {
     border: none;
     background-color: transparent;
 }
 
+.detailCard {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    align-items: center;
+    
+}
 
 @media (max-width: 400px) {
     .icon {

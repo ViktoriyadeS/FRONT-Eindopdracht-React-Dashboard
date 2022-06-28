@@ -11,7 +11,7 @@ const HomePage = () => {
   const projectAverageRating = assignmentRatingAverage.filter(
     (item) => item.assignment === "SCRUM" || item.assignment.includes("Project")
   );
-    const chartTitle = "Projects"
+    const chartTitle = ""
   return (
     <div className="page">
       <div className="infoBox">
@@ -29,7 +29,7 @@ const HomePage = () => {
         </span>
       </div>
       <div className="chartBox">
-        <h2>Projects Average Score</h2>
+        <h2>Projects Average Score:</h2>
         <Chart data={projectAverageRating} labels={labels} chartTitleText = {chartTitle}/>
       </div>
     </div>
