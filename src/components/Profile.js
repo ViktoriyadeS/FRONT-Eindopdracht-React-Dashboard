@@ -2,13 +2,19 @@ import React from "react";
 import { useNavigate, useLocation } from "react-router";
 import Chart from "./BarChart";
 import DetailCard from "./DetailCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 function Profile() {
   const location = useLocation();
   const navigate = useNavigate();
+  const arrow = <FontAwesomeIcon icon={faCircleArrowLeft} />;
+
   return (
     <>
-      <button className="goBackBtn" onClick={() => navigate(-1)}></button>
+      <button className="goBackBtn" onClick={() => navigate(-1)}>
+        {arrow} Go Back
+      </button>
       <DetailCard
         name={location.state.name}
         last_name={location.state.profile.map((item) => item.last_name)}

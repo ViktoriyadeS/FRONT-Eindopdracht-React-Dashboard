@@ -31,7 +31,7 @@ function Students() {
   return (
     <div className="page">
       <div>
-        <h1>List</h1>
+        <h1>Profiles:</h1>
         <div className="list">
           {uniqueStudentNames.map((student) => {
             return (
@@ -48,7 +48,7 @@ function Students() {
             );
           })}
         </div>
-        <h1>Student Votes</h1>
+        <h1>Student Votes: </h1>
         <div className="infoBox">
           <span className="widget">
             <h3>Students</h3>
