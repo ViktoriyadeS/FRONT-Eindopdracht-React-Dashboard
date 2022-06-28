@@ -7,6 +7,7 @@ import {
   uniqueStudentNames,
   overviewAssignments,
   assignmentRatingAverage,
+  assignmentGroups,
 } from "../data/functions";
 
 function Students() {
@@ -48,6 +49,31 @@ function Students() {
           })}
         </div>
         <h1>Student Votes</h1>
+        <div className="infoBox">
+          <span className="widget">
+            <h3>Students</h3>
+            <p>{uniqueStudentNames.length}</p>
+          </span>
+          <span className="widget">
+            <h3>Total Assignments</h3>
+            <p>{overviewAssignments.length}</p>
+          </span>
+          <span className="widget">
+            <h3>Total Votes</h3>
+            <p>{studentData.length}</p>
+          </span>
+        </div>
+        <hr />
+        <div className="infoBox">
+          <span className="widget">
+            <h3>Most Difficult: </h3>
+            <p>{}</p>
+          </span>
+          <span className="widget">
+            <h3>Most Fun: </h3>
+            <p>{}</p>
+          </span>
+        </div>
       </div>
     </div>
   );

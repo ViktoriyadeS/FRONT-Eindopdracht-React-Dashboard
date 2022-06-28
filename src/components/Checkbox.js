@@ -16,7 +16,14 @@ function Checkbox(props) {
 
   return (
     <div key={props.text} className="checkbox">
-      <input type="checkbox" value={props.text} checked={checked} onChange={e=>{setChecked(e.target.checked)}} />
+      <input
+        type="checkbox"
+        value={props.text}
+        checked={checked}
+        onChange={(e) => {
+          setChecked(e.target.checked);
+        }}
+      />
       <label htmlFor="checkbox"> {props.text}</label>
       <div>{checked && console.log(props.text)}</div>
     </div>
@@ -24,4 +31,3 @@ function Checkbox(props) {
 }
 
 export default Checkbox;
-

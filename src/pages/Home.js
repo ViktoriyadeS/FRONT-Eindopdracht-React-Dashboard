@@ -1,4 +1,4 @@
-import Chart from "../components/Chart";
+import BarChart from "../components/BarChart";
 import {
   overviewAssignments,
   assignmentRatingAverage,
@@ -11,7 +11,7 @@ const HomePage = () => {
   const projectAverageRating = assignmentRatingAverage.filter(
     (item) => item.assignment === "SCRUM" || item.assignment.includes("Project")
   );
-    const chartTitle = ""
+  const chartTitle = "";
   return (
     <div className="page">
       <div className="infoBox">
@@ -30,7 +30,11 @@ const HomePage = () => {
       </div>
       <div className="chartBox">
         <h2>Projects Average Score:</h2>
-        <Chart data={projectAverageRating} labels={labels} chartTitleText = {chartTitle}/>
+        <BarChart
+          data={projectAverageRating}
+          labels={labels}
+          chartTitleText={chartTitle}
+        />
       </div>
     </div>
   );

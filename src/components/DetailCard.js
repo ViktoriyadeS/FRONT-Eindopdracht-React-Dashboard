@@ -1,11 +1,14 @@
 import React from "react";
 
 function DetailCard(props) {
-  const { age, email, phone, avatar } = props;
+  const { name, last_name, age, email, phone, avatar } = props;
   return (
     <div className="detailCard">
       <img src={avatar} alt="avatar" className="avatar" />
       <div className="details">
+        <h2>
+          {name} {last_name}
+        </h2>
         <p>
           <b>AGE:</b> {age}
         </p>

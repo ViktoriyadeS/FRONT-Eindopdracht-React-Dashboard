@@ -1,13 +1,14 @@
 import React from "react";
-import { useLocation } from "react-router";
-import Chart from "./Chart";
+import { useNavigate, useLocation } from "react-router";
+import Chart from "./BarChart";
 import DetailCard from "./DetailCard";
 
 function Profile() {
   const location = useLocation();
+  const navigate = useNavigate();
   return (
     <>
-      <h2>{location.state.name} {location.state.profile.map((item) => item.last_name)}</h2>
+      <button className="goBackBtn" onClick={() => navigate(-1)}></button>
       <DetailCard
         name={location.state.name}
         last_name={location.state.profile.map((item) => item.last_name)}

@@ -89,6 +89,7 @@ canvas {
     height: 120px;
     border-radius: 20px;
 }
+
 .page .widget p {
     font-size: 35px;
     color: #e3170a;
@@ -116,9 +117,18 @@ canvas {
 .detailCard {
     display: flex;
     flex-direction: row;
-    width: 600px;
     align-items: center;
-    
+    justify-content: center;
+    border: solid 0.5px #dbdbdb;
+    border-radius: 15px;
+    margin: 10px;
+    background-color: #929291a5;
+}
+
+.avatar {
+    margin: 20px;
+    border-radius: 50%;
+    background-color: #dbdbdb;
 }
 
 @media (max-width: 400px) {

@@ -19,7 +19,7 @@ ChartJS.register(
   Legend
 );
 
-const Chart = (props) => {
+const BarChart = (props) => {
   const { labels, data, chartTitleText } = props;
   const [chartData, setChartData] = useState({
     datasets: [],
@@ -96,4 +96,4 @@ const Chart = (props) => {
   return <Bar options={chartOptions} data={chartData} />;
 };
 
-export default Chart;
+export default BarChart;
