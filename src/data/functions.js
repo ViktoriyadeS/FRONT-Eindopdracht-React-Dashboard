@@ -104,6 +104,7 @@ export {
   assignmentsRatingAverageWithLabels,
   overviewAssignments,
   studentGroups,
+  assignmentGroups,
   uniqueStudentNames,
   projects,
   avgAssignments

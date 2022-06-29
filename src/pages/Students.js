@@ -1,52 +1,72 @@
-import { uniqueStudentNames, overviewAssignments } from "../data/functions";
-import studentData from "../data/studentData";
-import Chart from "../components/Chart";
-
-import Checkbox from "../components/Checkbox";
-import { useState } from "react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import StudentBtn from "../components/StudetBtn";
+import studentData from "../data/studentData";
+import studentsDetails from "../data/studentsDetails";
+import {
+  uniqueStudentNames,
+  overviewAssignments,
+  assignmentsRatingAverageWithLabels,
+} from "../data/functions";
+import LineChart from "../components/LineChart";
 
 function Students() {
-  const [studentChartData, setStudentChartData] = useState([]);
-  const [isShown, setIsShown] = useState(false);
-  const studentChartLabels = overviewAssignments.map((item) => item.assignment);
+  let navigate = useNavigate();
   const handleClick = (el) => {
-    console.log(el + " clicked");
     const results = studentData.filter((item) => item.name === el);
-    setStudentChartData(results);
-    setIsShown(current => !current);
+    const profileDetails = studentsDetails.filter((item) => item.name === el);
+    const routeChange = (el) => {
+      let path = `${el}`;
+      navigate(path, {
+        state: {
+          name: el,
+          data: results,
+          profile: profileDetails,
+        },
+      });
+    };
+    routeChange(el);
   };
-  const chartTitle = "";
-  const studentsList = uniqueStudentNames.map((student) => {
-    return (
-      <div className="card" key={Math.random(100) + 100 * Math.random(100)}>
-        <StudentBtn
-          value={student}
-          id={student}
-          onClick={() => handleClick(student)}
-        />
-      </div>
-    );
-  });
 
-  console.log(studentChartData);
   return (
     <div className="page">
+      <div className="infoBox">
+        <span className="widget home">
+          <h3>Students:</h3>
+          <p>{uniqueStudentNames.length}</p>
+          <h3>Assignments:</h3>
+          <p>{overviewAssignments.length}</p>
+          <h3>Votes:</h3>
+          <p>{studentData.length}</p>
+        </span>
+      </div>
       <div>
-        <h1>List</h1>
-        <div className="list">{studentsList}</div>
-        {isShown && <h1>Student Votes</h1>}
-        {isShown && (
-          <div>
-            <Chart
-              data={studentChartData}
-              labels={studentChartLabels}
-              chartTitleText={chartTitle}
-            />
-            ;
-          </div>
-        )}
+        <div className="list">
+          {uniqueStudentNames.map((student) => {
+            return (
+              <div
+                className="card"
+                key={Math.random(100) + 100 * Math.random(100)}
+              >
+                <StudentBtn
+                  value={student}
+                  id={student}
+                  onClick={() => handleClick(student)}
+                />
+              </div>
+            );
+          })}
+        </div>
+        <div className="mobile-box">
+          <p>Please visit our desktop version of the site to see graphs</p>
+        </div>
+        <div className="chartBox">
+          <h2>Assignments Average Score:</h2>
+          <LineChart
+            chartData={assignmentsRatingAverageWithLabels}
+            chartLabels={overviewAssignments.map((item) => item.assignment)}
+          />
+        </div>
       </div>
     </div>
   );

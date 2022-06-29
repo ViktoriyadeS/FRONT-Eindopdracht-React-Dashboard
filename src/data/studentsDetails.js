@@ -1,0 +1,86 @@
+const studentsDetails = [
+  {
+    name: "Evelyn",
+    last_name: "Mayers",
+    email: "emayers0@google.pl",
+    phone: "+86 (449) 283-0585",
+    avatar:
+      "https://robohash.org/voluptatecommodisunt.png?size=100x100&set=set1",
+    age: 20,
+  },
+  {
+    name: "Aranka",
+    last_name: "Iacobucci",
+    email: "a.iacobucci1@ycombinator.com",
+    phone: "+972 (332) 278-7618",
+    avatar: "https://robohash.org/etnequeminus.png?size=100x100&set=set1",
+    age: 68,
+  },
+  {
+    name: "Floris",
+    last_name: "Stuchberry",
+    email: "fstuchberry2@ustream.tv",
+    phone: "+420 (847) 797-8952",
+    avatar: "https://robohash.org/sequiessequia.png?size=100x100&set=set1",
+    age: 57,
+  },
+  {
+    name: "Hector",
+    last_name: "Clapston",
+    email: "h_clapston3@google.de",
+    phone: "+55 (248) 692-4518",
+    avatar: "https://robohash.org/nihilenimiusto.png?size=100x100&set=set1",
+    age: 62,
+  },
+  {
+    name: "Martina",
+    last_name: "Broadbear",
+    email: "mbroadbear4@google.it",
+    phone: "+62 (447) 490-2926",
+    avatar: "https://robohash.org/autdoloribusodit.png?size=100x100&set=set1",
+    age: 18,
+  },
+  {
+    name: "Maurits",
+    last_name: "Ferreo",
+    email: "mferreo5@deviantart.com",
+    phone: "+420 (473) 422-1296",
+    avatar:
+      "https://robohash.org/consecteturdoloremquenihil.png?size=100x100&set=set1",
+    age: 40,
+  },
+  {
+    name: "Rahima",
+    last_name: "Peakman",
+    email: "rpeakman6@miibeian.gov.cn",
+    phone: "+46 (157) 750-8958",
+    avatar: "https://robohash.org/autemexmaxime.png?size=100x100&set=set1",
+    age: 28,
+  },
+  {
+    name: "Sandra",
+    last_name: "Ryam",
+    email: "sryam7@reddit.com",
+    phone: "+55 (423) 789-1205",
+    avatar: "https://robohash.org/rerumnemodolores.png?size=100x100&set=set1",
+    age: 35,
+  },
+  {
+    name: "Wietske",
+    last_name: "Lawrance",
+    email: "wlawrance8@unc.edu",
+    phone: "+1 (982) 446-9308",
+    avatar: "https://robohash.org/quiautest.png?size=100x100&set=set1",
+    age: 27,
+  },
+  {
+    name: "Storm",
+    last_name: "Mougeot",
+    email: "smougeot9@disqus.com",
+    phone: "+33 (982) 612-9336",
+    avatar: "https://robohash.org/aliasfugitnon.png?size=100x100&set=set1",
+    age: 24,
+  },
+];
+
+export default studentsDetails;

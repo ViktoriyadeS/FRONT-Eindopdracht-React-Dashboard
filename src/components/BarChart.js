@@ -19,13 +19,12 @@ ChartJS.register(
   Legend
 );
 
-const Chart = (props) => {
+const BarChart = (props) => {
   const { labels, data, chartTitleText } = props;
   const [chartData, setChartData] = useState({
     datasets: [],
   });
   const [chartOptions, setChartOptions] = useState({});
-
   useEffect(() => {
     setChartData({
       labels: labels,
@@ -34,6 +33,7 @@ const Chart = (props) => {
           label: "Difficulty",
           data: data.map((item) => item.difficulty),
           backgroundColor: "#E3170A",
+          // backgroundColor: "rgba(75,192,192,1)",
           borderWidth: 2,
           borderRadius: Number.MAX_VALUE,
           borderSkipped: false,
@@ -42,6 +42,7 @@ const Chart = (props) => {
           label: "Fun",
           data: data.map((item) => item.fun),
           backgroundColor: "#A9E5BB",
+          // backgroundColor: "#742774",
           borderWidth: 2,
           borderRadius: Number.MAX_VALUE,
           borderSkipped: false,
@@ -77,7 +78,7 @@ const Chart = (props) => {
         x: {
           ticks: {
             maxRotation: 0,
-            // minRotation: 30,
+            minRotation: 30,
             color: "white",
           },
         },
@@ -91,10 +92,9 @@ const Chart = (props) => {
         },
       },
     });
-    console.log('change')
   }, []);
 
   return <Bar options={chartOptions} data={chartData} />;
 };
 
-export default Chart;
+export default BarChart;
