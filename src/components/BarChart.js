@@ -34,6 +34,7 @@ const BarChart = (props) => {
           label: "Difficulty",
           data: data.map((item) => item.difficulty),
           backgroundColor: "#E3170A",
+          // backgroundColor: "rgba(75,192,192,1)",
           borderWidth: 2,
           borderRadius: Number.MAX_VALUE,
           borderSkipped: false,
@@ -42,6 +43,7 @@ const BarChart = (props) => {
           label: "Fun",
           data: data.map((item) => item.fun),
           backgroundColor: "#A9E5BB",
+          // backgroundColor: "#742774",
           borderWidth: 2,
           borderRadius: Number.MAX_VALUE,
           borderSkipped: false,
@@ -77,7 +79,7 @@ const BarChart = (props) => {
         x: {
           ticks: {
             maxRotation: 0,
-            // minRotation: 30,
+            minRotation: 30,
             color: "white",
           },
         },

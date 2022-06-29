@@ -18,12 +18,12 @@ h4 {
     font-size: 30px;
     height: 50px;
     font-family: "Montserrat", sans-serif;
-    padding: 15px 15px 0px;
+    padding: 15px 15px 0px 55px;
 }
 nav {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 20px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -51,7 +51,7 @@ nav .link p {
 }
 
 .page {
-    padding: 75px;
+    padding: 25px 75px;
     overflow: hidden;
 }
 .page .chartBox {
@@ -68,24 +68,19 @@ nav .link p {
 }
 canvas {
     max-height: 420px;
-    width: 100%;
     padding: 40px;
     background-color: #222233;
     border-radius: 30px;
-    /* border-top-left-radius: 0; */
 }
 .page .infoBox {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
-    /* height: 150px; */
 }
-.page .infoBox .widget {
+.page .widget {
     margin: 10px;
     padding: 10px;
-    /* border-bottom: 2px solid #232323;
-    border-radius: 50%; */
     text-align: center;
     background-color: #222233;
     color: #dbdbdb;
@@ -100,12 +95,15 @@ canvas {
     font-weight: 900;
     margin-top: 2px;
 }
+.topRow {
+    display: flex;
+}
 .list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    margin-left: 1rem;
+    justify-content: center;
 }
 .card {
     border-radius: 20px;
@@ -129,33 +127,55 @@ canvas {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: solid 0.5px #dbdbdb;
+    /* border: solid 0.5px #dbdbdb; */
     border-radius: 15px;
     margin: 10px;
-    background-color: #929291a5;
+    background-color: #d6d6d2a5;
+    font-size: 12px;
+    min-width: 374px;
 }
 
 .avatar {
     margin: 20px;
     border-radius: 50%;
-    background-color: #dbdbdb;
+    background-color: #222233;
 }
 .goBackBtn {
-    position: absolute;
-    top: 120px;
-    left: 50px;
-    height: 100px;
+    margin-left: 20px;
+    height: 50px;
     font-size: 15px;
     background-color: transparent;
     box-shadow: none;
     border: none;
     color: #dbdbdb;
+    position: absolute;
 }
 
 .goBackBtn:hover {
     color: #a9e5bb;
 }
-
+@media (max-width: 900px) {
+    .topRow {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    .page {
+        margin: 10px;
+        padding: 40px 80px;
+    }
+    .page .infoBox {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .page .widget {
+        width: unset;
+    }
+    .chartBox {
+        display: none;
+    }
+}
 @media (max-width: 400px) {
     .icon {
         display: block;
@@ -163,4 +183,5 @@ canvas {
     nav .link p {
         display: none;
     }
+    
 }

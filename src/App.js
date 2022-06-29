@@ -23,7 +23,7 @@ const App = () => {
       <header className="App-header">
         <BrowserRouter>
           <div>
-            <div className="App-top">Dashboard</div>
+            <div className="App-top">_\ . board</div>
             <nav>
               <Link className="link" to="/">
                 {home} <p> Home</p>
