@@ -1,21 +1,14 @@
 import * as React from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Students from "./pages/Students";
 import Profile from "./components/Profile";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHouse,
-  faUserGroup,
-  faLayerGroup,
-} from "@fortawesome/free-solid-svg-icons";
-
+import { faHouse, faUserGroup } from "@fortawesome/free-solid-svg-icons";
 
 const home = <FontAwesomeIcon icon={faHouse} className="icon" />;
 const students = <FontAwesomeIcon icon={faUserGroup} className="icon" />;
-// const assignments = <FontAwesomeIcon icon={faLayerGroup} className="icon" />;
 
 const App = () => {
   return (
@@ -23,14 +16,18 @@ const App = () => {
       <header className="App-header">
         <BrowserRouter>
           <div>
-            <div className="App-top">_\ . board</div>
+            <Link className="link" to="/">
+              <div id="logo" className="App-top">
+                _\ . board
+              </div>
+            </Link>
             <nav>
-              <Link className="link" to="/">
+              <NavLink className="link" to="/">
                 {home} <p> Home</p>
-              </Link>
-              <Link className="link" to="/students">
+              </NavLink>
+              <NavLink className="link" to="/students">
                 {students} <p>Students</p>
-              </Link>
+              </NavLink>
             </nav>
             <Routes>
               <Route exact path="/" element={<Home />} />

@@ -25,7 +25,6 @@ const BarChart = (props) => {
     datasets: [],
   });
   const [chartOptions, setChartOptions] = useState({});
-
   useEffect(() => {
     setChartData({
       labels: labels,

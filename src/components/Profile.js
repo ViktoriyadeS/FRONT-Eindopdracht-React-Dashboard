@@ -45,6 +45,9 @@ function Profile() {
       <button className="goBackBtn" onClick={() => navigate(-1)}>
         {arrow} Go Back
       </button>
+      <div className="mobile-box">
+        <p>Please visit our desktop version of the site to see graphs</p>
+      </div>
       <div className="chartBox">
         <Chart
           data={location.state.data}
