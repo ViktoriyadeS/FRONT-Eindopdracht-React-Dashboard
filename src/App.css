@@ -1,8 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap");
 
+html,
 body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
     background-color: #545a6b;
     color: #232323;
+    overflow-x: hidden;
 }
 h1,
 h2,
@@ -178,6 +183,9 @@ canvas {
     font-size: 40px;
     display: none;
 }
+.table-wrapper{
+    border-radius: 15px;
+}
 
 @media (max-width: 900px) {
     .topRow {
@@ -204,7 +212,7 @@ canvas {
     .chartBox {
         display: none;
     }
-    .mobile-box{
+    .mobile-box {
         display: block;
     }
 }
@@ -215,6 +223,7 @@ canvas {
     .nav {
         right: 8px;
     }
+
     .page .widget.home {
         display: flex;
         flex-direction: column;

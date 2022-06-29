@@ -3,12 +3,18 @@ import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Students from "./pages/Students";
+import Assignments from "./pages/Assignments";
 import Profile from "./components/Profile";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse, faUserGroup } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHouse,
+  faUserGroup,
+  faLayerGroup,
+} from "@fortawesome/free-solid-svg-icons";
 
 const home = <FontAwesomeIcon icon={faHouse} className="icon" />;
 const students = <FontAwesomeIcon icon={faUserGroup} className="icon" />;
+const assignments = <FontAwesomeIcon icon={faLayerGroup} className="icon" />;
 
 const App = () => {
   return (
@@ -28,10 +34,14 @@ const App = () => {
               <NavLink className="link" to="/students">
                 {students} <p>Students</p>
               </NavLink>
+              <NavLink className="link" to="/assignments">
+                {assignments} <p>Assignments</p>
+              </NavLink>
             </nav>
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route exact path="/students" element={<Students />} />
+              <Route exact path="/assignments" element={<Assignments />} />
               <Route exact path="/students/Aranka" element={<Profile />} />
               <Route exact path="/students/Evelyn" element={<Profile />} />
               <Route exact path="/students/Floris" element={<Profile />} />

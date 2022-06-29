@@ -4,7 +4,6 @@ import Chart from "./BarChart";
 import DetailCard from "./DetailCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import { uniqueStudentNames } from "../data/functions";
 
 const arrow = <FontAwesomeIcon icon={faCircleArrowLeft} />;
 
