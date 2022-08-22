@@ -1,7 +1,7 @@
 import React from "react";
 import studentData from "../data/studentData";
 import DataTable from "react-data-table-component";
-import { uniqueStudentNames, overviewAssignments } from "../data/functions";
+
 const columns = [
   {
     name: "Assignment",
