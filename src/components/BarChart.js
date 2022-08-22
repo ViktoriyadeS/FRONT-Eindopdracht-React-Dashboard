@@ -20,12 +20,12 @@ ChartJS.register(
 );
 
 const BarChart = (props) => {
+  const { labels, data, chartTitleText } = props;
   const [chartData, setChartData] = useState({
     datasets: [],
   });
   const [chartOptions, setChartOptions] = useState({});
   useEffect(() => {
-    const { labels, data, chartTitleText } = props;
     setChartData({
       labels: labels,
       datasets: [
