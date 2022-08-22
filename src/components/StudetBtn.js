@@ -1,6 +1,3 @@
-import React, { setState, useState } from "react";
-import studentData from "../data/studentData";
-
 function StudentBtn(props) {
   const { onClick, value } = props;
   return (
