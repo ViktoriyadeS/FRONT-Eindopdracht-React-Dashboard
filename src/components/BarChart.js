@@ -92,6 +92,7 @@ const BarChart = (props) => {
         },
       },
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return <Bar options={chartOptions} data={chartData} />;
