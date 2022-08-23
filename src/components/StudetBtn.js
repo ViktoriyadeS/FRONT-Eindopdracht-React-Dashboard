@@ -1,3 +1,5 @@
+import React from "react";
+
 function StudentBtn(props) {
   const { onClick, value } = props;
   return (
